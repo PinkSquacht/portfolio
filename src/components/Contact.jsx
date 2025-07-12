@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './Contact.module.css';
+
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -15,7 +15,7 @@ const Contact = () => {
   };
 
   return (
-    <section className={styles.contact}>
+    <section>
       <h2>Contact</h2>
       {submitted ? (
         <p>Thank you for reaching out!</p>

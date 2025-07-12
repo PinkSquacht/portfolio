@@ -1,4 +1,6 @@
-import './App.css'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Landing from './components/Landing';
 import About from './components/About';
 import Projects from './components/Projects';

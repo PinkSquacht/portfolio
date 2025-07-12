@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './Projects.module.css';
+
 
 const Projects = () => (
-  <section className={styles.projects}>
+  <section>
     <h2>Projects</h2>
     <ul>
       <li>
