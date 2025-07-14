@@ -3,9 +3,9 @@ import React from 'react'
 
 function Resume() {
   return (
-    <section className="bg-info-subtle bg-gradient w-100 py-4">
+    <section className="w-100 py-4 " style={{ background: '#ffe4ec' }}>
       <div className="container">
-        <div className="card shadow mx-auto" style={{ maxWidth: 900 }}>
+        <div className="card shadow-sm mx-auto" style={{ maxWidth: 1000, background: '#eafbe7' }}>
           <div className="card-body">
             <h1 className="mb-4 text-center">Lloyd Bowar</h1>
             <section className="mb-4">

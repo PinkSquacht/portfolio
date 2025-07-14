@@ -15,55 +15,55 @@ const Contact = () => {
   };
 
   return (
-   <section className="bg-white-subtle bg-gradient w-100 py-4">
-    <div className="container">
-      <div className="card shadow-sm mx-auto" style={{ maxWidth: 1000 }}>
-        <div className="card-body text-center">
-          <h2 className="mb-4">Contact</h2>
-          {submitted ? (
-            <p>Thank you for reaching out!</p>
-          ) : (
-        <form action="https://formspree.io/f/mzzgnwye" method="POST" onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              className="form-control"
-            />
+    <section className="w-100 py-4" style={{ background: '#ffe4ec' }}>
+      <div className="container">
+        <div className="card shadow-sm mx-auto" style={{ maxWidth: 700, background: '#eafbe7' }}>
+          <div className="card-body">
+            <h2 className="mb-4">Contact</h2>
+            {submitted ? (
+              <p>Thank you for reaching out!</p>
+            ) : (
+              <form action="https://formspree.io/f/mzzgnwye" method="POST" onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    value={form.name}
+                    onChange={handleChange}
+                    required
+                    className="form-control"
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                    className="form-control"
+                  />
+                </div>
+                <div className="mb-3">
+                  <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    value={form.message}
+                    onChange={handleChange}
+                    required
+                    className="form-control"
+                    rows="5"
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary">Send</button>
+              </form>
+            )}
           </div>
-          <div className="mb-3">
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={form.email}
-              onChange={handleChange}
-              required
-              className="form-control"
-            />
-          </div>
-          <div className="mb-3">
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={form.message}
-              onChange={handleChange}
-              required
-              className="form-control"
-              rows="5"
-            />
-          </div>
-          <button type="submit" className="btn btn-primary">Send</button>
-        </form>
-      )}
-    </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 };
 

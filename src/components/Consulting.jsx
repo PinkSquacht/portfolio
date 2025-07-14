@@ -1,14 +1,24 @@
-import React from 'react'
-import Contact from './Contact'
-
+import React, { useState } from 'react'
 
 function Consulting() {
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
   return (
-    <section className="bg-info-subtle bg-gradient w-100 min-vh-100 py-4" style={{ marginBottom: 0 }}>
+    <section className="w-100 py-4" style={{ background: '#ffe4ec' }}>
       <div className="container">
-        <div className="card shadow mx-auto mb-4" style={{ maxWidth: 900 }}>
+        <div className="card shadow-sm mx-auto" style={{ maxWidth: 1000, background: '#eafbe7' }}>
           <div className="card-body">
-            <h1 className="mb-4 text-center">Consulting</h1>
+            <h2 className="mb-4">Consulting</h2>
             <p className="lead text-center mb-4">
               I help individuals and small businesses navigate technology with confidence.
             </p>
@@ -37,9 +47,49 @@ function Consulting() {
             </div>
           </div>
         </div>
-        <div className="card shadow-sm mx-auto mb-4" style={{ maxWidth: 600, background: 'white' }}>
-          <div className="card-body">
-            <Contact />
+        <div className="card shadow-sm mx-auto" style={{ maxWidth: 600 }}>
+          <div className="card-body text-center">
+            <h2 className="mb-4">Contact</h2>
+            {submitted ? (
+              <p>Thank you for reaching out!</p>
+            ) : (
+              <form action="https://formspree.io/f/mzzgnwye" method="POST" onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    value={form.name}
+                    onChange={handleChange}
+                    required
+                    className="form-control"
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                    className="form-control"
+                  />
+                </div>
+                <div className="mb-3">
+                  <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    value={form.message}
+                    onChange={handleChange}
+                    required
+                    className="form-control"
+                    rows="5"
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary">Send</button>
+              </form>
+            )}
           </div>
         </div>
       </div>

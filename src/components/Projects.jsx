@@ -37,7 +37,7 @@ const Projects = () => {
 
   if (loading) {
     return (
-      <section className="bg-info-subtle bg-gradient w-100 py-4">
+      <section className="w-100 py-4">
         <div className="container">
           <div className="card shadow-sm mx-auto" style={{ maxWidth: 700 }}>
             <div className="card-body">
@@ -56,7 +56,7 @@ const Projects = () => {
 
   if (error) {
     return (
-      <section className="bg-info-subtle bg-gradient w-100 py-4">
+      <section className="w-100 py-4">
         <div className="container">
           <div className="card shadow-sm mx-auto" style={{ maxWidth: 700 }}>
             <div className="card-body">
@@ -72,9 +72,9 @@ const Projects = () => {
   }
 
   return (
-    <section className="bg-info-subtle bg-gradient w-100 py-4">
+    <section className="w-100 py-4" style={{ background: '#ffe4ec' }}>
       <div className="container">
-        <div className="card shadow-sm mx-auto" style={{ maxWidth: 1000 }}>
+        <div className="card shadow-sm mx-auto" style={{ maxWidth: 1000, background: '#eafbe7' }}>
           <div className="card-body">
             <h2 className="mb-4">Projects</h2>
             <div className="row">
