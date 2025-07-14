@@ -8,6 +8,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
+import Consulting from './components/Consulting';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           </>
         } />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/consulting" element={<Consulting />} />
       </Routes>
     </Router>
   );
