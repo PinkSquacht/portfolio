@@ -15,7 +15,7 @@ const Contact = () => {
   };
 
   return (
-   <section className="bg-success-subtle bg-gradient w-100 py-4">
+   <section className="bg-white-subtle bg-gradient w-100 py-4">
     <div className="container">
       <div className="card shadow-sm mx-auto" style={{ maxWidth: 1000 }}>
         <div className="card-body text-center">

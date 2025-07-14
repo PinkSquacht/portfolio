@@ -4,9 +4,9 @@ import Contact from './Contact'
 
 function Consulting() {
   return (
-    <section className="bg-light w-100 py-4">
+    <section className="bg-info-subtle bg-gradient w-100 min-vh-100 py-4" style={{ marginBottom: 0 }}>
       <div className="container">
-        <div className="card shadow mx-auto" style={{ maxWidth: 800 }}>
+        <div className="card shadow mx-auto mb-4" style={{ maxWidth: 900 }}>
           <div className="card-body">
             <h1 className="mb-4 text-center">Consulting</h1>
             <p className="lead text-center mb-4">
@@ -33,12 +33,16 @@ function Consulting() {
               </ul>
             </section>
             <div className="alert alert-info text-center">
-              Need help with a tech challenge? <a href="/contact" className="alert-link">Contact me</a> for a free consultation!
+              Need help with a tech challenge? Contact me for a free consultation!
             </div>
           </div>
         </div>
+        <div className="card shadow-sm mx-auto mb-4" style={{ maxWidth: 600, background: 'white' }}>
+          <div className="card-body">
+            <Contact />
+          </div>
+        </div>
       </div>
-      <Contact />
     </section>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 
 function Resume() {
   return (
-    <section className="bg-light w-100 py-4">
+    <section className="bg-info-subtle bg-gradient w-100 py-4">
       <div className="container">
         <div className="card shadow mx-auto" style={{ maxWidth: 900 }}>
           <div className="card-body">
