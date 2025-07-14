@@ -1,4 +1,6 @@
 import React from 'react'
+import Contact from './Contact'
+
 
 function Consulting() {
   return (
@@ -36,6 +38,7 @@ function Consulting() {
           </div>
         </div>
       </div>
+      <Contact />
     </section>
   )
 }
