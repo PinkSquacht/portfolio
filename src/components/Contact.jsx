@@ -15,12 +15,15 @@ const Contact = () => {
   };
 
   return (
-    <section>
-      <h2>Contact</h2>
-      {submitted ? (
-        <p>Thank you for reaching out!</p>
-      ) : (
-        <form onSubmit={handleSubmit}>
+   <section className="bg-success-subtle bg-gradient w-100 py-4">
+    <div className="container">
+      <div className="card shadow-sm mx-auto" style={{ maxWidth: 1000 }}>
+        <div className="card-body text-center">
+          <h2 className="mb-4">Contact</h2>
+          {submitted ? (
+            <p>Thank you for reaching out!</p>
+          ) : (
+        <form action="https://formspree.io/f/mzzgnwye" method="POST" onSubmit={handleSubmit}>
           <div className="mb-3">
             <input
               type="text"
@@ -57,7 +60,10 @@ const Contact = () => {
           <button type="submit" className="btn btn-primary">Send</button>
         </form>
       )}
-    </section>
+    </div>
+      </div>
+    </div>
+  </section>
   );
 };
 
