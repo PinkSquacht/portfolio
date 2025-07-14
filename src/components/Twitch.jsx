@@ -94,7 +94,7 @@ function Twitch() {
             )}
             <div className="ratio ratio-16x9 mb-4">
               <iframe
-                src="https://player.twitch.tv/?channel=PinkSquacht&parent=portfolio.vercel.app"
+                src="https://player.twitch.tv/?channel=PinkSquacht&parent=lloydbowar.vercel.app"
                 frameBorder="0"
                 allowFullScreen
                 scrolling="no"
@@ -105,7 +105,7 @@ function Twitch() {
             </div>
             <div className="ratio ratio-16x9 mb-4">
               <iframe
-                src="https://www.twitch.tv/embed/PinkSquacht/chat?parent=portfolio.vercel.app"
+                src="https://www.twitch.tv/embed/PinkSquacht/chat?parent=lloydbowar.vercel.app"
                 frameBorder="0"
                 scrolling="no"
                 height="480"
