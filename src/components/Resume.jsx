@@ -163,8 +163,8 @@ function Resume() {
             <hr />
             <div className="text-center mt-4">
               <a
-                href="/assets/LloydBowar_2025.pdf"
-                download
+xx                href="/assets/LloydBowar_2025_Resume.pdf"
+                download="LloydBowar_Resume_2025.pdf"
                 className="btn btn-primary"
               >
                 Download PDF
