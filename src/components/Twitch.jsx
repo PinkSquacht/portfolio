@@ -12,7 +12,7 @@ function Twitch() {
     const fetchStream = async () => {
       try {
         const response = await fetch(
-          'https://api.twitch.tv/helix/streams?user_login=PinkSquacht',
+          'https://api.twitch.tv/helix/streams?user_login=PinkSquatch',
           {
             headers: {
               'Client-ID': '7o4ipezcpllt8i60uy7sr5xsx9cy5f',
@@ -53,7 +53,6 @@ function Twitch() {
         setVideosLoading(false);
       }
     };
-    // PinkSquacht's user_id is 443228723 (replace if needed)
     fetchVideos();
   }, []);
 
@@ -94,7 +93,7 @@ function Twitch() {
             )}
             <div className="ratio ratio-16x9 mb-4">
               <iframe
-                src="https://player.twitch.tv/?channel=PinkSquacht&parent=lloydbowar.vercel.app"
+                src="https://player.twitch.tv/?channel=PinkSquatch&parent=lloydbowar.vercel.app"
                 frameBorder="0"
                 allowFullScreen
                 scrolling="no"
@@ -105,7 +104,7 @@ function Twitch() {
             </div>
             <div className="ratio ratio-16x9 mb-4">
               <iframe
-                src="https://www.twitch.tv/embed/PinkSquacht/chat?parent=lloydbowar.vercel.app"
+                src="https://www.twitch.tv/embed/PinkSquatch/chat?parent=lloydbowar.vercel.app"
                 frameBorder="0"
                 scrolling="no"
                 height="480"
