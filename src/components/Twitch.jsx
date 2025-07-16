@@ -11,15 +11,7 @@ function Twitch() {
   useEffect(() => {
     const fetchStream = async () => {
       try {
-        const response = await fetch(
-          'https://api.twitch.tv/helix/streams?user_login=PinkSquatch',
-          {
-            headers: {
-              'Client-ID': '7o4ipezcpllt8i60uy7sr5xsx9cy5f',
-              'Accept': 'application/json',
-            },
-          }
-        );
+        const response = await fetch('/api/twitch?type=stream');
         if (!response.ok) throw new Error('Failed to fetch stream info');
         const data = await response.json();
         setStreamInfo(data.data[0] || null);
@@ -35,15 +27,7 @@ function Twitch() {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await fetch(
-          'https://api.twitch.tv/helix/videos?user_id=443228723&type=archive&first=5',
-          {
-            headers: {
-              'Client-ID': '7o4ipezcpllt8i60uy7sr5xsx9cy5f',
-              'Accept': 'application/json',
-            },
-          }
-        );
+        const response = await fetch('/api/twitch?type=videos');
         if (!response.ok) throw new Error('Failed to fetch past streams');
         const data = await response.json();
         setVideos(data.data || []);
