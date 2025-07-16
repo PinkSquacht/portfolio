@@ -21,8 +21,7 @@ const Projects = () => {
         // Filter out forked repos and sort by stars
         const filteredRepos = data
           .filter(repo => !repo.fork)
-          .sort((a, b) => b.stargazers_count - a.stargazers_count)
-          .slice(0, 4);
+          .sort((a, b) => b.stargazers_count - a.stargazers_count);
         
         setRepos(filteredRepos);
       } catch (err) {
@@ -37,17 +36,11 @@ const Projects = () => {
 
   if (loading) {
     return (
-      <section className="w-100 py-4">
-        <div className="container">
-          <div className="card shadow-sm mx-auto" style={{ maxWidth: 700 }}>
-            <div className="card-body">
-              <h2 className="mb-4">Projects</h2>
-              <div className="text-center">
-                <div className="spinner-border" role="status">
-                  <span className="visually-hidden">Loading...</span>
-                </div>
-              </div>
-            </div>
+      <section className="container my-5">
+        <h2 className="mb-4">Projects</h2>
+        <div className="text-center">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       </section>
@@ -56,83 +49,66 @@ const Projects = () => {
 
   if (error) {
     return (
-      <section className="w-100 py-4">
-        <div className="container">
-          <div className="card shadow-sm mx-auto" style={{ maxWidth: 700 }}>
-            <div className="card-body">
-              <h2 className="mb-4">Projects</h2>
-              <div className="alert alert-danger" role="alert">
-                Error loading projects: {error}
-              </div>
-            </div>
-          </div>
+      <section className="container my-5">
+        <h2 className="mb-4">Projects</h2>
+        <div className="alert alert-danger" role="alert">
+          Error loading projects: {error}
         </div>
       </section>
     );
   }
 
   return (
-    <section className="w-100 py-4" style={{ background: '#ffe4ec' }}>
-      <div className="container">
-        <div className="card shadow-sm mx-auto" style={{ maxWidth: 1000, background: '#eafbe7' }}>
-          <div className="card-body">
-            <h2 className="mb-4">Projects</h2>
-            <div className="row">
-              {repos.map(repo => (
-                <div key={repo.id} className="col-md-12 mb-4">
-                  <div className="card h-100">
-                    <div className="card-body">
-                      <h5 className="card-title">
-                        <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
-                          {repo.name}
-                        </a>
-                      </h5>
-                      <p className="card-text">
-                        {repo.description || 'No description available'}
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div>
-                          {repo.language && (
-                            <span className="badge bg-primary me-2">{repo.language}</span>
-                          )}
-                          <small className="text-muted">
-                            <i className="bi bi-star"></i> {repo.stargazers_count}
-                          </small>
-                        </div>
-                        <small className="text-muted">
-                          Updated: {new Date(repo.updated_at).toLocaleDateString()}
-                        </small>
-                      </div>
-                    </div>
-                    <div className="card-footer">
-                      <div className="d-flex justify-content-between">
-                        <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm">
-                          View Code
-                        </a>
-                        {repo.homepage && (
-                          <a href={repo.homepage} target="_blank" rel="noopener noreferrer" className="btn btn-outline-success btn-sm">
-                            Live Demo
-                          </a>
-                        )}
-                      </div>
-                    </div>
+    <section className="container my-5">
+      <h2 className="mb-4">Projects</h2>
+      <div className="row">
+        {repos.map(repo => (
+          <div key={repo.id} className="col-md-6 col-lg-4 mb-4">
+            <div className="card h-100">
+              <div className="card-body">
+                <h5 className="card-title">
+                  <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                    {repo.name}
+                  </a>
+                </h5>
+                <p className="card-text">
+                  {repo.description || 'No description available'}
+                </p>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    {repo.language && (
+                      <span className="badge bg-primary me-2">{repo.language}</span>
+                    )}
+                    <small className="text-muted">
+                      <i className="bi bi-star"></i> {repo.stargazers_count}
+                    </small>
                   </div>
+                  <small className="text-muted">
+                    Updated: {new Date(repo.updated_at).toLocaleDateString()}
+                  </small>
                 </div>
-              ))}
-            </div>
-            {repos.length === 0 && (
-              <div className="text-center">
-                <p className="lead">No repositories found.</p>
               </div>
-            )}
-            <div className="text-center mt-4">
-              <a href={`https://github.com/${GITHUB_USERNAME}`} target="_blank" rel="noopener noreferrer" className="btn btn-dark">
-                View My GitHub Profile
-              </a>
+              <div className="card-footer">
+                <div className="d-flex justify-content-between">
+                  <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm">
+                    View Code
+                  </a>
+                  {repo.homepage && (
+                    <a href={repo.homepage} target="_blank" rel="noopener noreferrer" className="btn btn-outline-success btn-sm">
+                      Live Demo
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
+      {repos.length === 0 && (
+        <div className="text-center">
+          <p className="lead">No repositories found.</p>
+        </div>
+      )}
     </section>
   );
 };
