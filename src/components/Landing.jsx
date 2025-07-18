@@ -27,7 +27,7 @@ const Landing = () => (
               <br />
               <strong>Hi, I’m Lloyd — a certified full stack developer and tech support professional.</strong>
               <br />
-              Currently at Leviton, I bring hands-on experience in problem-solving combined with strong coding skills in Python, JavaScript, SQL, Node.js, React, TypeScript, and Flask.
+              Currently at a leading electrical manufacturing company, I bring hands-on experience in problem-solving combined with strong coding skills in Python, JavaScript, SQL, Node.js, React, TypeScript, and Flask.
               <br />
               I’m passionate about building efficient, scalable web applications and continuously growing my expertise in software development.
               <br /><br />
