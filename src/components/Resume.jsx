@@ -132,23 +132,6 @@ function Resume() {
                   <li>Collaborated with cross-functional teams to resolve production challenges.</li>
                 </ul>
               </div>
-              <div className="mb-3">
-                <h3 className="h5">Driver | Custom Pipe & Fabrication LLC | Woodburn, OR <span className="text-muted">Apr 2020 – Aug 2021</span></h3>
-                <ul>
-                  <li>Transported pipes, pumps, and supplies to customers and job sites, ensuring timely deliveries.</li>
-                  <li>Tracked stock levels, managed inventory, and fulfilled orders.</li>
-                  <li>Assisted customers with inquiries and product recommendations.</li>
-                  <li>Maintained equipment and followed safety guidelines.</li>
-                </ul>
-              </div>
-              <div className="mb-3">
-                <h3 className="h5">Restaurant Manager, Cook, Server | Denny’s | Woodburn, OR <span className="text-muted">Jul 2015 – Aug 2023</span></h3>
-                <ul>
-                  <li>Supervised daily operations and led a team of 15 employees.</li>
-                  <li>Introduced operational improvements, increasing profitability by 15%.</li>
-                  <li>Conducted training sessions to develop staff skills and maintain high morale.</li>
-                </ul>
-              </div>
             </section>
             <section className="mb-4">
               <h2 className="h4 border-bottom pb-2">Certifications</h2>
