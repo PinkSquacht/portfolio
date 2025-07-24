@@ -12,7 +12,7 @@ function Resume() {
               <h2 className="h4 border-bottom pb-2">Contact Information</h2>
               <ul className="list-unstyled mb-0">
                 <li><strong>Email:</strong> Lloyd.bowar@gmail.com</li>
-                <li><strong>Phone:</strong> (123) 456-7890</li>
+                <li><strong>Phone:</strong> (503) 779-3173</li>
                 <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lloydbowar" target="_blank" rel="noopener noreferrer">linkedin.com/in/lloydbowar</a></li>
               </ul>
             </section>
@@ -29,12 +29,6 @@ function Resume() {
             </section>
             <section className="mb-4">
               <h2 className="h4 border-bottom pb-2">Education</h2>
-              <div className="mb-2">
-                <strong>University of XYZ</strong><br />
-                Bachelor of Science in Computer Science<br />
-                Graduated: May 2024<br />
-                <span className="text-muted">Relevant Coursework: Data Structures, Algorithms, Web Development, Database Management</span>
-              </div>
               <div className="mb-2">
                 <strong>Coding Temple | Chicago, IL</strong><br />
                 Full Stack Development Bootcamp<br />

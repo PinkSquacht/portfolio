@@ -47,7 +47,9 @@ function Consulting() {
             </div>
           </div>
         </div>
-        <div className="card shadow-sm mx-auto" style={{ maxWidth: 600 }}>
+        
+        {/* Added margin-top for spacing between content and contact form */}
+        <div className="card shadow-sm mx-auto mt-5" style={{ maxWidth: 600 }}>
           <div className="card-body text-center">
             <h2 className="mb-4">Contact</h2>
             {submitted ? (
