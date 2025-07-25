@@ -13,7 +13,6 @@ function Navbar() {
           <ul className="navbar-nav">
             <li className="nav-item"><a className="nav-link active" href="/resume">Resume</a></li>
             <li className="nav-item"><a className="nav-link" href="/consulting">Consulting</a></li>
-            <li className="nav-item"><a className="nav-link" href="/twitch">Twitch</a></li>
           </ul>
         </div>
       </div>

@@ -12,7 +12,7 @@ function Resume() {
               <h2 className="h4 border-bottom pb-2">Contact Information</h2>
               <ul className="list-unstyled mb-0">
                 <li><strong>Email:</strong> Lloyd.bowar@gmail.com</li>
-                <li><strong>Phone:</strong> (123) 456-7890</li>
+                <li><strong>Phone:</strong> (503) 779-3173</li>
                 <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lloydbowar" target="_blank" rel="noopener noreferrer">linkedin.com/in/lloydbowar</a></li>
               </ul>
             </section>
@@ -29,12 +29,6 @@ function Resume() {
             </section>
             <section className="mb-4">
               <h2 className="h4 border-bottom pb-2">Education</h2>
-              <div className="mb-2">
-                <strong>University of XYZ</strong><br />
-                Bachelor of Science in Computer Science<br />
-                Graduated: May 2024<br />
-                <span className="text-muted">Relevant Coursework: Data Structures, Algorithms, Web Development, Database Management</span>
-              </div>
               <div className="mb-2">
                 <strong>Coding Temple | Chicago, IL</strong><br />
                 Full Stack Development Bootcamp<br />
@@ -130,23 +124,6 @@ function Resume() {
                   <li>Enhanced production workflows, achieving a 10% efficiency increase by introducing new processes.</li>
                   <li>Developed and implemented a tracking system for quality control and accurate assembly.</li>
                   <li>Collaborated with cross-functional teams to resolve production challenges.</li>
-                </ul>
-              </div>
-              <div className="mb-3">
-                <h3 className="h5">Driver | Custom Pipe & Fabrication LLC | Woodburn, OR <span className="text-muted">Apr 2020 – Aug 2021</span></h3>
-                <ul>
-                  <li>Transported pipes, pumps, and supplies to customers and job sites, ensuring timely deliveries.</li>
-                  <li>Tracked stock levels, managed inventory, and fulfilled orders.</li>
-                  <li>Assisted customers with inquiries and product recommendations.</li>
-                  <li>Maintained equipment and followed safety guidelines.</li>
-                </ul>
-              </div>
-              <div className="mb-3">
-                <h3 className="h5">Restaurant Manager, Cook, Server | Denny’s | Woodburn, OR <span className="text-muted">Jul 2015 – Aug 2023</span></h3>
-                <ul>
-                  <li>Supervised daily operations and led a team of 15 employees.</li>
-                  <li>Introduced operational improvements, increasing profitability by 15%.</li>
-                  <li>Conducted training sessions to develop staff skills and maintain high morale.</li>
                 </ul>
               </div>
             </section>

@@ -9,7 +9,6 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import Consulting from './components/Consulting';
-import Twitch from './components/Twitch';
 
 function App() {
   return (
@@ -26,7 +25,6 @@ function App() {
         } />
         <Route path="/resume" element={<Resume />} />
         <Route path="/consulting" element={<Consulting />} />
-        <Route path="/twitch" element={<Twitch />} />
       </Routes>
     </Router>
   );
