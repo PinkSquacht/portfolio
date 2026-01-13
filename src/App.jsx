@@ -24,7 +24,6 @@ function App() {
           </>
         } />
         <Route path="/resume" element={<Resume />} />
-        <Route path="/consulting" element={<Consulting />} />
       </Routes>
     </Router>
   );

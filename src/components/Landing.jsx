@@ -9,11 +9,11 @@ const Landing = () => (
             <img src="/assets/img/PinkSquatch.png" alt="Tech Workspace" style={{ width: 200, height: 200 }} className="me-md-4 mb-3 mb-md-0" />
             <div className="text-start">
               <div className="fs-2 fw-bold mb-2">💻 Welcome to My Digital Workspace</div>
-              <div className="fs-4 mb-2">Hi, I’m Lloyd – Full-Stack Developer & IT Consultant</div>
-              <div className="mb-2">Crafting modern web solutions and delivering real-world IT expertise. Whether you're here to view my work, collaborate on a project, or explore how I can help your business grow — you're in the right place.</div>
+              <div className="fs-4 mb-2">Hi, I’m Lloyd – Full-Stack Developer</div>
+              <div className="mb-2">Crafting modern web solutions and delivering real-world IT expertise. Whether you're here to view my work, collaborate on a project — you're in the right place.</div>
               <div className="mb-1">
                 <span className="me-3">🛠️ Skilled in React, Node.js, Python, SQL, and more</span>
-                <span>📍 Based in the U.S. – Available for freelance & consulting work</span>
+                <span>📍 Based in the U.S. – Available for freelance work</span>
               </div>
             </div>
           </div>

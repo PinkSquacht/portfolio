@@ -104,16 +104,9 @@ const Projects = () => {
                       </div>
                     </div>
                     <div className="card-footer">
-                      <div className="d-flex justify-content-between">
-                        <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm">
-                          View Code
-                        </a>
-                        {repo.homepage && (
-                          <a href={repo.homepage} target="_blank" rel="noopener noreferrer" className="btn btn-outline-success btn-sm">
-                            Live Demo
-                          </a>
-                        )}
-                      </div>
+                      <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm">
+                        View Code
+                      </a>
                     </div>
                   </div>
                 </div>

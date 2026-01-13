@@ -8,8 +8,7 @@ const About = () => (
           <h2 className="mb-4">About Me</h2>
           <p>
             I’m Lloyd Bowar, a certified full-stack developer and IT consultant
-            based in the U.S. With hands-on experience at Leviton
-            in technical support, I specialize in building modern, scalable web
+            based in the U.S. I specialize in building modern, scalable web
             applications and helping individuals and small businesses solve
             real-world tech challenges.
           </p>
@@ -21,14 +20,9 @@ const About = () => (
             to deliver results that matter.
           </p>
           <p>
-            Outside of tech, I’m a proud parent of a son and daughter, and engaged
-            to my wonderful fiancé. I enjoy gaming, fishing, and watching movies—
-            activities that keep me inspired and balanced.
-          </p>
-          <p>
             When I’m not coding, I enjoy consulting for local businesses, exploring
             new tech trends, and sharing my knowledge to empower others. I’m
-            available for freelance projects, consulting, and collaboration—let’s
+            available for freelance projects and collaboration—let’s
             build something great together!
           </p>
         </div>
