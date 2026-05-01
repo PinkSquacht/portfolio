@@ -18,8 +18,10 @@ const Projects = () => {
         }
 
         const data = await response.json();
+        /* Only show these 3 featured projects on the portfolio. */
+        const featuredProjectNames = ['WatchBuddy', 'portfolio', 'Ecommerce-Templates-Site'];
         const filteredRepos = data
-          .filter((repo) => !repo.fork)
+          .filter((repo) => featuredProjectNames.includes(repo.name))
           .sort((a, b) => b.stargazers_count - a.stargazers_count);
 
         setRepos(filteredRepos);
