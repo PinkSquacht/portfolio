@@ -6,7 +6,7 @@ const Landing = () => (
       <div className="row align-items-center g-5">
         <div className="col-lg-7">
           {/* Main hero message. Update this first if you want to change your positioning. */}
-          <div className="eyebrow mb-3">Full Stack Developer · Technical Support · Consulting</div>
+          <div className="eyebrow mb-3">Full Stack Developer · Technical Support</div>
           <h1 className="display-5 fw-semibold text-white mb-3">
             Professional portfolio and practical technical problem solving.
           </h1>
