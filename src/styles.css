@@ -1,0 +1,290 @@
+:root {
+  /* Core theme tokens: change these first if you want a different overall look. */
+  color-scheme: dark;
+  /* Page background layers. */
+  --bg: #07111f;
+  --bg-elevated: rgba(10, 18, 33, 0.88);
+  /* Panel and card surfaces. */
+  --panel: rgba(15, 24, 42, 0.86);
+  --panel-strong: #101a2d;
+  /* Borders and separators. */
+  --line: rgba(255, 255, 255, 0.1);
+  /* Text colors. */
+  --text: #e5eefc;
+  --muted: rgba(229, 238, 252, 0.72);
+  /* Accent color used for buttons, links, and labels. */
+  --accent: #6ea8fe;
+  --accent-strong: #4d86f7;
+  --accent-soft: rgba(110, 168, 254, 0.16);
+  /* Shared sizing and shadow values. */
+  --shadow: 0 24px 60px rgba(4, 10, 20, 0.42);
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  /* This background creates the polished dark glass effect across the site. */
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(88, 130, 255, 0.16), transparent 35%),
+    radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.06), transparent 22%),
+    linear-gradient(180deg, #06101d 0%, #081322 42%, #050b14 100%);
+  font-family: "Avenir Next", "Avenir", "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.site-navbar {
+  /* Sticky nav shell used across the site. */
+  background: rgba(6, 13, 25, 0.86);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+
+.site-navbar .navbar-brand,
+.site-navbar .nav-link {
+  color: var(--text) !important;
+}
+
+.site-navbar .nav-link {
+  opacity: 0.82;
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link:focus {
+  opacity: 1;
+}
+
+.nav-link-cta {
+  padding-inline: 1rem !important;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.letter-spaced {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.92rem;
+}
+
+.hero-section,
+.content-section {
+  /* Gives each section the same breathing room, which keeps the layout calm. */
+  position: relative;
+  padding: 5rem 0;
+}
+
+.hero-section {
+  padding-top: 4.5rem;
+}
+
+.hero-section::before,
+.content-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 45%);
+  pointer-events: none;
+}
+
+.section-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-shell {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.section-subtitle {
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.content-panel,
+.hero-card,
+.contact-panel,
+.resume-panel {
+  /* Shared glass panel treatment for major content blocks. Adjust once, update everywhere. */
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.content-panel,
+.resume-panel {
+  padding: 1.5rem;
+}
+
+.contact-panel {
+  max-width: 760px;
+  padding: 1.5rem;
+}
+
+.hero-card {
+  padding: 1.75rem;
+  background: linear-gradient(180deg, rgba(18, 30, 52, 0.92), rgba(10, 18, 33, 0.92));
+}
+
+.hero-avatar {
+  width: 176px;
+  height: 176px;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 40px rgba(2, 5, 10, 0.35);
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(110, 168, 254, 0.28);
+  color: #dbe8ff;
+  font-size: 0.92rem;
+}
+
+.project-card {
+  /* Individual repository cards inside the projects grid. */
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(110, 168, 254, 0.08), transparent 50%);
+  pointer-events: none;
+}
+
+.project-card-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 1.4rem;
+}
+
+.project-card-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.project-card-text {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.form-control,
+.form-control:focus {
+  /* Input styling aligned with the darker visual system. Useful if you redesign the form later. */
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  color: rgba(229, 238, 252, 0.42);
+}
+
+.form-label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  border: none;
+  box-shadow: 0 12px 28px rgba(77, 134, 247, 0.28);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, #85bbff, #5b8ff8);
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.loading-form {
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+@media (max-width: 991.98px) {
+  /* Tighten spacing on tablet-sized screens. */
+  .hero-section,
+  .content-section {
+    padding: 3.5rem 0;
+  }
+
+  .hero-card {
+    text-align: left;
+  }
+
+  .contact-panel,
+  .content-panel,
+  .resume-panel {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  /* Make touch targets and buttons easier to use on phones. */
+  .hero-avatar {
+    width: 144px;
+    height: 144px;
+  }
+
+  .btn-lg {
+    width: 100%;
+  }
+}

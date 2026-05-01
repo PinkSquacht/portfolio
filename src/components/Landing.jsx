@@ -1,42 +1,51 @@
 import React from 'react';
-import Navbar from './Navbar';
+
 const Landing = () => (
-  <div>
-    <section className="w-100 py-4" style={{ background: '#ffe4ec' }}>
-      <div className="container">
-        <div className="mb-4">
-          <div className="alert alert-primary text-center p-4 rounded-4 shadow-sm d-flex flex-column flex-md-row align-items-center justify-content-center gap-4">
-            <img src="/assets/img/PinkSquatch.png" alt="Tech Workspace" style={{ width: 200, height: 200 }} className="me-md-4 mb-3 mb-md-0" />
-            <div className="text-start">
-              <div className="fs-2 fw-bold mb-2">💻 Welcome to My Digital Workspace</div>
-              <div className="fs-4 mb-2">Hi, I’m Lloyd – Full-Stack Developer</div>
-              <div className="mb-2">Crafting modern web solutions and delivering real-world IT expertise. Whether you're here to view my work, collaborate on a project — you're in the right place.</div>
-              <div className="mb-1">
-                <span className="me-3">🛠️ Skilled in React, Node.js, Python, SQL, and more</span>
-                <span>📍 Based in the U.S. – Available for freelance work</span>
-              </div>
-            </div>
+  <section id="home" className="hero-section">
+    <div className="container section-shell hero-shell">
+      <div className="row align-items-center g-5">
+        <div className="col-lg-7">
+          {/* Main hero message. Update this first if you want to change your positioning. */}
+          <div className="eyebrow mb-3">Full Stack Developer · Technical Support · Consulting</div>
+          <h1 className="display-5 fw-semibold text-white mb-3">
+            Professional portfolio and practical technical problem solving.
+          </h1>
+          <p className="lead text-white-50 mb-4">
+            I build polished web experiences and bring hands-on support experience to every project. My focus is clear communication, reliable delivery, and software that feels dependable.
+          </p>
+          <div className="d-flex flex-wrap gap-3 mb-4">
+            <a className="btn btn-primary btn-lg" href="#projects">View Projects</a>
+            <a className="btn btn-outline-light btn-lg" href="#contact">Contact Me</a>
+            <a className="btn btn-link text-decoration-none text-white-50 px-0" href="/resume">Open Resume</a>
+          </div>
+          {/* Skill chips make the stack easy to scan at a glance. */}
+          <div className="d-flex flex-wrap gap-2">
+            <span className="skill-pill">React</span>
+            <span className="skill-pill">Node.js</span>
+            <span className="skill-pill">Python</span>
+            <span className="skill-pill">SQL</span>
+            <span className="skill-pill">TypeScript</span>
+            <span className="skill-pill">Flask</span>
           </div>
         </div>
-        <div className="card shadow-sm mx-auto" style={{ maxWidth: 1000, background: '#eafbe7' }}>
-          <div className="card-body text-center text-light-emphasis">
-            <h1 className="text-center">
-              
-            </h1>
-            <p>
-              <br />
-              <strong>Hi, I’m Lloyd — a certified full stack developer and tech support professional.</strong>
-              <br />
-              Currently at a leading electrical manufacturing company, I bring hands-on experience in problem-solving combined with strong coding skills in Python, JavaScript, SQL, Node.js, React, TypeScript, and Flask.
-              <br />
-              I’m passionate about building efficient, scalable web applications and continuously growing my expertise in software development.
-              <br /><br />
+        <div className="col-lg-5">
+          {/* Secondary hero card: swap the image or summary here if you want a different first impression. */}
+          <div className="hero-card text-center">
+            <img
+              src="/assets/img/PinkSquatch.png"
+              alt="Lloyd Bowar portrait"
+              className="hero-avatar mb-4"
+            />
+            <p className="text-uppercase text-white-50 small mb-2">Based in the U.S.</p>
+            <h2 className="h4 text-white mb-3">Lloyd Bowar</h2>
+            <p className="text-white-75 mb-0">
+              Certified full stack developer with experience in frontend development, backend APIs, and technical service work.
             </p>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 ); 
 
 export default Landing;

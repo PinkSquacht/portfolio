@@ -3,13 +3,17 @@ import React from 'react'
 
 function Resume() {
   return (
-    <section className="w-100 py-4 " style={{ background: '#ffe4ec' }}>
-      <div className="container">
-        <div className="card shadow-sm mx-auto" style={{ maxWidth: 1000, background: '#eafbe7' }}>
-          <div className="card-body">
-            <h1 className="mb-4 text-center">Lloyd Bowar</h1>
+    <section className="content-section">
+      <div className="container section-shell">
+        {/* Resume header: keep this aligned with the name you use everywhere else. */}
+        <div className="section-heading text-center">
+          <div className="eyebrow mb-2">Resume</div>
+          <h1 className="section-title mb-0">Lloyd Bowar</h1>
+        </div>
+        {/* Keep the resume sections separate so you can edit one area without touching the rest. */}
+        <div className="content-panel resume-panel">
             <section className="mb-4">
-              <h2 className="h4 border-bottom pb-2">Contact Information</h2>
+              <h2 className="h4 section-subtitle">Contact Information</h2>
               <ul className="list-unstyled mb-0">
                 <li><strong>Email:</strong> Lloyd.bowar@gmail.com</li>
                 <li><strong>Phone:</strong> (503) 779-3173</li>
@@ -17,7 +21,7 @@ function Resume() {
               </ul>
             </section>
             <section className="mb-4">
-              <h2 className="h4 border-bottom pb-2">Summary</h2>
+              <h2 className="h4 section-subtitle">Summary</h2>
               <p className="mb-0">
                 Driven and detail-oriented Software Engineer with a strong academic background in full
                 stack development and SQL programming. Experienced in creating innovative, data-driven 
@@ -28,7 +32,7 @@ function Resume() {
               </p>
             </section>
             <section className="mb-4">
-              <h2 className="h4 border-bottom pb-2">Education</h2>
+              <h2 className="h4 section-subtitle">Education</h2>
               <div className="mb-2">
                 <strong>Coding Temple | Chicago, IL</strong><br />
                 Full Stack Development Bootcamp<br />
@@ -69,7 +73,7 @@ function Resume() {
               </div>
             </section>
             <section className="mb-4">
-              <h2 className="h4 border-bottom pb-2">Skills</h2>
+              <h2 className="h4 section-subtitle">Skills</h2>
               <ul className="mb-0">
                 <li>Programming Languages: Python, JavaScript, SQL, Typescript</li>
                 <li>Frameworks: React, Node.js, Flask</li>
@@ -80,7 +84,7 @@ function Resume() {
               </ul>
             </section>
             <section className="mb-4">
-              <h2 className="h4 border-bottom pb-2">Projects</h2>
+              <h2 className="h4 section-subtitle">Projects</h2>
               <div className="mb-3 ms-3">
                 <strong>AI-Driven Movie Recommendation App</strong>
                 <ul>
@@ -91,7 +95,7 @@ function Resume() {
               </div>
             </section>
             <section className="mb-4">
-              <h2 className="h4 border-bottom pb-2">Professional Experience</h2>
+              <h2 className="h4 section-subtitle">Professional Experience</h2>
               <div className="mb-3">
                 <h3 className="h5">Architecural Lighting Controls Technical Service Representative | Leviton <span className="text-muted">June 2025 – Present</span></h3>
                 <ul>
@@ -128,7 +132,7 @@ function Resume() {
               </div>
             </section>
             <section className="mb-4">
-              <h2 className="h4 border-bottom pb-2">Certifications</h2>
+              <h2 className="h4 section-subtitle">Certifications</h2>
               <ul className="mb-0">
                 <li>
                   <a href="https://www.credly.com/users/lloyd-bowar" target="_blank" rel="noopener noreferrer">
@@ -137,17 +141,16 @@ function Resume() {
                 </li>
               </ul>
             </section>
-            <hr />
-            <div className="text-center mt-4">
+            <div className="text-center mt-4 pt-3 border-top">
+              {/* Update this PDF path whenever you export a new resume version. */}
               <a
-xx                href="/assets/LloydBowar_2025_Resume.pdf"
+                href="/assets/LloydBowar_2025_Resume.pdf"
                 download="LloydBowar_Resume_2025.pdf"
                 className="btn btn-primary"
               >
                 Download PDF
               </a>
             </div>
-          </div>
         </div>
       </div>
     </section>

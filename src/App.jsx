@@ -8,23 +8,24 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
-import Consulting from './components/Consulting';
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={
-          <>
-            <Landing />
-            <About />
-            <Projects />
-            <Contact />
-          </>
-        } />
-        <Route path="/resume" element={<Resume />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Landing />
+              <About />
+              <Projects />
+              <Contact />
+            </>
+          } />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+      </main>
     </Router>
   );
 }
