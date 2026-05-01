@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react';
 
 const GITHUB_USERNAME = 'PinkSquacht';
 
+/* Live demo URLs for each featured project. */
+const demoLinks = {
+  WatchBuddy: 'https://watch-buddy.vercel.app',
+  portfolio: 'https://lloydbowar.dev',
+  'Ecommerce-Templates-Site': 'https://ecommercetemplatessite.vercel.app',
+};
+
 const Projects = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -64,7 +71,7 @@ const Projects = () => {
                   <div className="project-card h-100">
                     <div className="project-card-body">
                       <h5 className="project-card-title">
-                        <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-decoration-none stretched-link">
+                        <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
                           {repo.name}
                         </a>
                       </h5>
@@ -75,6 +82,17 @@ const Projects = () => {
                           <small className="text-secondary">Stars: {repo.stargazers_count}</small>
                         </div>
                         <small className="text-secondary text-nowrap">Updated {new Date(repo.updated_at).toLocaleDateString()}</small>
+                      </div>
+                      {/* Demo and source code links. */}
+                      <div className="d-flex gap-2 mt-3">
+                        {demoLinks[repo.name] && (
+                          <a href={demoLinks[repo.name]} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary flex-grow-1">
+                            View Live
+                          </a>
+                        )}
+                        <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline-secondary flex-grow-1">
+                          Source Code
+                        </a>
                       </div>
                     </div>
                   </div>
